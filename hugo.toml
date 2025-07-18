@@ -1,0 +1,4 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Starting from Zero: A History Grad’s Fall into the Void'
+theme = 'ananke'  # 添加这行，指定 Ananke 主题
