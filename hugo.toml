@@ -1,4 +1,24 @@
 baseURL = 'https://ohiocodedreams.com/'
 languageCode = 'en-us'
-title = 'Starting from Zero: A History Grad’s Fall into the Void'
-theme = 'ananke'  # 添加这行，指定 Ananke 主题
+title = 'Ohio Code Dreams'
+theme = 'ananke'
+
+[params]
+  description = "A blog about my journey from history grad to coder in a Rust Belt town"
+  favicon = "/images/favicon.ico"
+  background_image = "/images/hero-bg.jpg"
+  mainSections = ["posts"]
+  custom_css = ["custom.css"]
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 3

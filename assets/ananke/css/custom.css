@@ -1,0 +1,32 @@
+/* 优化文章列表 */
+.post-list .post-item {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* 调整字体和行距 */
+body, p, .post-content {
+  font-size: 1.2rem;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+}
+
+/* 美化导航栏 */
+.main-navigation {
+  background-color: #2c3e50;
+  padding: 1rem;
+}
+.main-navigation a {
+  color: #fff;
+  margin-right: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* 优化 hero 区域 */
+.hero {
+  text-align: center;
+  padding: 3rem 0;
+  background-size: cover;
+  color: #fff;
+}
