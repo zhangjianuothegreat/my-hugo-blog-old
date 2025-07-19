@@ -1,24 +1,54 @@
 baseURL = 'https://ohiocodedreams.com/'
 languageCode = 'en-us'
 title = 'Ohio Code Dreams'
-theme = 'ananke'
+theme = 'PaperMod'
 
 [params]
-  description = "A blog about my journey from history grad to coder in a Rust Belt town"
-  favicon = "/images/favicon.ico"
-  background_image = "/images/hero-bg.jpg"
-  mainSections = ["posts"]
-  custom_css = ["custom.css"]
+  description = "Ohio Code Dreams: A history major’s gritty journey to self-taught coding in a Rust Belt town. Fails, wins, and Python in Ohio. #OhioCodeDreams"
+  author = "Jake Miller"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  comments = false
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  disableSpecial1stPost = false
+  cover.image = "/images/ohio-coding-diner.jpg"
+
+[params.profileMode]
+  enabled = false  # 显示文章列表
+  title = "Ohio Code Dreams"
+  subtitle = "From history grad to coder: my raw journey in a Rust Belt town"
+  imageUrl = "/images/ohio-coding-diner.jpg"
+  imageWidth = 120
+  imageHeight = 120
+
+[params.homeInfoParams]
+  Title = "Welcome to Ohio Code Dreams"
+  Content = "I'm a history grad turned coder, sharing my journey from diner shifts to Python scripts. Follow my fails, wins, and Rust Belt grit!"
+
+[[params.socialIcons]]
+  name = "twitter"
+  url = "https://x.com/OhioCodeDreams"
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/zhangjianuothegreat"
 
 [[menu.main]]
+  identifier = "home"
   name = "Home"
   url = "/"
   weight = 1
 [[menu.main]]
+  identifier = "posts"
   name = "Posts"
   url = "/posts/"
   weight = 2
 [[menu.main]]
+  identifier = "about"
   name = "About"
   url = "/about/"
   weight = 3

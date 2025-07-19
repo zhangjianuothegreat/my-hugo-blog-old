@@ -1,162 +1,212 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>Ohio Code Dreams</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="A blog about my journey from history grad to coder in a Rust Belt town">
-    <meta name="generator" content="Hugo 0.148.1">
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
-    
+<html lang="en" dir="auto">
 
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Posts | Ohio Code Dreams</title>
+<meta name="keywords" content="">
+<meta name="description" content="Posts - Ohio Code Dreams">
+<meta name="author" content="Jake Miller">
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css" integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
-  
-    <link rel="stylesheet" href="/custom.css">
-  
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-    
+    </style>
+</noscript>
+</head>
 
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    
-      
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+</script>
 
-
-    
-
-    
-    
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="Ohio Code Dreams" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="Ohio Code Dreams" />
-      
-    
-
-    
-      <link rel="canonical" href="http://localhost:1313/posts/">
-    
-
-    <meta property="og:url" content="http://localhost:1313/posts/">
-  <meta property="og:site_name" content="Ohio Code Dreams">
-  <meta property="og:title" content="Posts">
-  <meta property="og:description" content="A blog about my journey from history grad to coder in a Rust Belt town">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
-
-  <meta itemprop="name" content="Posts">
-  <meta itemprop="description" content="A blog about my journey from history grad to coder in a Rust Belt town">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Posts">
-  <meta name="twitter:description" content="A blog about my journey from history grad to coder in a Rust Belt town">
-
-	
-  </head><body class="ma0 avenir bg-near-white development">
-
-    
-
-  <header>
-    <div class="pb3-m pb6-l bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l center items-center justify-between">
-    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
-      
-        Ohio Code Dreams
-      
-    </a>
-    <div class="flex-l items-center">
-      
-
-      
-        <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/" title="Home page">
-              Home
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/posts/" title="Posts page">
-              Posts
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/about/" title="About page">
-              About
-            </a>
-          </li>
-          
-        </ul>
-      
-      <div class="ananke-socials"></div>
-
-    </div>
-  </div>
-</nav>
-
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          Posts
-        </h1>
-        
-      </div>
-    </div>
-  </header>
-
-
-    <main class="pb7" role="main">
-      
-  <article class="pa3 pa4-ns nested-copy-line-height">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links mid-gray"></section>
-    <section class="flex-ns mt5 flex-wrap justify-around">
-      
-        <div class="w-100 w-30-l mb4 relative bg-white">
-          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
-  <div class="mb3 pa4 gray overflow-hidden bg-white">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/my-first-post/" class="link black dim">
-        
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <pre tabindex="0"><code class="language-markdowntitle:" data-lang="markdowntitle:">date: 2025-07-18T10:42:00+08:00
-draft: false
-categories: [&#34;Coding Fails&#34;, &#34;Ohio Life&#34;]
-tags: [&#34;Ohio&#34;, &#34;coding&#34;, &#34;career change&#34;, &#34;Python&#34;]
-description: &#34;Ohio history grad fights $40,000 debt and diner job to learn coding. Follow Jake’s raw journey to coder. #OhioCodeDreams&#34;
-featured_image: &#34;/images/ohio-coding-diner.jpg&#34;Starting from Zero: Ohio History Grad’s Coding JourneyFrom Ohio History Grad to Coding NewbieMay 2020. I clutched my history master’s over a glitchy Zoom stage, 26 and cocky, ready to lecture on the Tea Act or Shakespeare’s tobacco (harsh New World leaf). I pictured dusty archives or teaching Ohio undergrads about the Articles of Confederation. Wrong. The world needed ventilators, Zoom accounts, and coders for toilet paper apps.The pandemic hit like a Rust Belt factory closing—fast, brutal. My Philly Fishtown shoebox, split with Jake, my poli-sci roommate, cost $1,600 a month. My $40,000 Navient debt was a guillotine, the grace period ticking like a bomb. I slung burgers near Temple for $12 an hour, tips barely buying a Yuengling. COVID shut the diner to takeout-only. Customers vanished. My boss, Tony, a chain-smoking pancake flipper, got sick and didn’t make it. His wife, Maria, followed. I poured coffee for Uber drivers, dodging the news’ body count.Why Learn to Code in a Rust Belt Town?Every night, I came home reeking of fryer grease, sneakers caked in diner sludge, firing off resumes. Museums, libraries, nonprofits—nothing. The academic job market, a Hunger Games pre-COVID, was now a wasteland. I refreshed Gmail like a slot machine, craving even a rejection. Twitter screamed death tolls: “3,000 dead today.” “No end in sight.” On our Craigslist couch, nursing a warm Yuengling, I wondered how to pay rent in a collapsing world.History gives perspective—Spanish Flu, Black Death—but didn’t loosen Navient’s chokehold. I ran numbers: $450 monthly payments post-deferment, $800 rent, $200 groceries. I cleared $1,200 on a good month. My roommate Jake, with his useless poli-sci degree, split $5 pizzas, joking we’d eat Purina by 30. It wasn’t funny.The Coding LeapBy August, I was pulling double shifts, hands raw from sanitizing tables. Job boards listed software engineers, data analysts, nothing for historians. Museums were padlocked, universities slashed adjuncts. I applied to admin jobs, thinking research skills might translate. No luck. Navient’s letters grew meaner, demanding $300 a month on income-based repayment. I sobbed into a towel, broke.Then coding crept in—not a dream, a last resort. Jake’s cousin, a Seattle tech bro, bragged about his six-figure job. I hated his smug face but envied the paycheck. Tech was hiring. I googled “how to code,” found stories of teachers and bartenders turned coders. I signed up for a free bootcamp, expecting to fail. Variables, loops, syntax errors—it was hell. I’d curse, slam my laptop, but kept going. Navient wouldn’t wait.My First Gig (and Crash)By December, I could write a calculator that didn’t crash. Upwork became my Wild West. I found a gig: a $150 WordPress site for Brenda’s South Philly bakery. I faked confidence, got hired, then panicked. Her cheap hosting spat errors—Permission denied, Database connection failed. I wrestled Stack Overflow, CSS, SMTP plugins. The site was a mess: text spilled, images stretched. Brenda disputed, left a 1-star review: “Unreliable, site’s a mess. Avoid.” My hope died.I didn’t touch my laptop for weeks. The diner’s exhaust fan drowned my thoughts. But history taught me persistence. I took a better course, rebuilt Brenda’s site for practice. It wasn’t perfect, but it worked. Spring 2021, I landed a $15/hour WordPress assistant gig. It’s grunt work, fixing plugins, but it’s a crack in the door. I’m not a coder—not yet—but I’m not just a history grad either.Read more about my Ohio coding journey (/about) | Follow on X
-</code></pre>
-    </div>
-    <a href="/posts/my-first-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Ohio Code Dreams (Alt + H)">Ohio Code Dreams</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
         </div>
-      
-    </section></article>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span class="active">Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
+  <h1>
+    Posts
+  </h1>
+</header>
 
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
-    &copy;  Ohio Code Dreams 2025 
-  </a>
-    <div><div class="ananke-socials"></div>
-</div>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Starting from Zero: Ohio History Grad’s Coding Journey
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Starting from Zero: Ohio History Grad’s Coding Journey From Ohio History Grad to Coding Newbie May 2020. I clutched my history master’s over a glitchy Zoom stage, 26 and cocky, ready to lecture on the Tea Act or Shakespeare’s tobacco (harsh New World leaf). I pictured dusty archives or teaching Ohio undergrads about the Articles of Confederation. Wrong. The world needed ventilators, Zoom accounts, and coders for toilet paper apps.
+...</p>
   </div>
-</footer>
+  <footer class="entry-footer"><span title='2025-07-18 10:42:00 +0800 CST'>July 18, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;578 words&nbsp;·&nbsp;Jake Miller</footer>
+  <a class="entry-link" aria-label="post link to Starting from Zero: Ohio History Grad’s Coding Journey" href="http://localhost:1313/posts/my-first-post/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Ohio Code Dreams</a></span> · 
 
-  </body>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
 </html>
