@@ -1,0 +1,27 @@
+<script>
+  // 复制代码功能
+  function copyCode(button) {
+    const codeBlock = button.closest('.code-wrapper').querySelector('.code-block');
+    const textToCopy = codeBlock.textContent;
+    
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      const originalText = button.innerHTML;
+      button.innerHTML = '<i class="fas fa-check"></i>';
+      setTimeout(() => {
+        button.innerHTML = originalText;
+      }, 2000);
+    });
+  }
+  
+  // 展开/折叠代码功能
+  function toggleCode(button) {
+    const codeWrapper = button.closest('.code-wrapper');
+    codeWrapper.classList.toggle('expanded');
+    
+    if (codeWrapper.classList.contains('expanded')) {
+      button.innerHTML = '收起代码';
+    } else {
+      button.innerHTML = '显示全部';
+    }
+  }
+</script>

@@ -3,33 +3,49 @@ languageCode = 'en-us'
 title = 'Ohio Code Dreams'
 theme = 'PaperMod'
 
+# 解决 MIME 类型错误，确保 CSS/JS 正确加载
+[mediaTypes]
+  [mediaTypes."text/css"]
+    suffixes = ["css"]  # 声明 CSS 文件类型
+  [mediaTypes."application/javascript"]
+    suffixes = ["js"]  # 声明 JS 文件类型
+
 [params]
   description = "Ohio Code Dreams: A history major’s gritty journey to self-taught coding in a Rust Belt town. Fails, wins, and Python in Ohio. #OhioCodeDreams"
-  author = "Jake Miller"
+  
+  # 作者配置
+  [params.author]
+    name = "Jake Miller"  # 作者名称
+    link = "/"  # 作者主页链接
+  
+  # 页面功能开关
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowWordCount = true
-  comments = false
-  defaultTheme = "auto"
+  comments = true  # 强制启用评论功能
+  defaultTheme = "auto"  # 自动切换深色/浅色模式
   disableThemeToggle = false
-  disableSpecial1stPost = false
-  cover.image = "/images/ohio-coding-diner.jpg"
+  cover.image = "/images/ohio-coding-diner.jpg"  # 默认封面图
+  customCSS = ["css/custom.css"]  # 自定义 CSS 支持
 
+# 个人资料模式（当前禁用）
 [params.profileMode]
-  enabled = false  # 显示文章列表
+  enabled = false
   title = "Ohio Code Dreams"
   subtitle = "From history grad to coder: my raw journey in a Rust Belt town"
   imageUrl = "/images/ohio-coding-diner.jpg"
   imageWidth = 120
   imageHeight = 120
 
+# 首页信息配置
 [params.homeInfoParams]
   Title = "Welcome to Ohio Code Dreams"
   Content = "I'm a history grad turned coder, sharing my journey from diner shifts to Python scripts. Follow my fails, wins, and Rust Belt grit!"
 
+# 社交图标配置
 [[params.socialIcons]]
   name = "twitter"
   url = "https://x.com/OhioCodeDreams"
@@ -37,6 +53,7 @@ theme = 'PaperMod'
   name = "github"
   url = "https://github.com/zhangjianuothegreat"
 
+# 主导航菜单
 [[menu.main]]
   identifier = "home"
   name = "Home"

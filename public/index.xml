@@ -6,22 +6,22 @@
     <description>Recent content on Ohio Code Dreams</description>
     <generator>Hugo -- 0.148.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Jul 2025 08:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About Me</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Sat, 19 Jul 2025 08:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;I’m Jake Miller, a history major from a dead-end Ohio town off Route 23, where the factories rusted out and the Buckeyes are the only thing keeping us sane. I’ve got a master’s from Ohio State that’s collecting dust, $1,200 in Navient debt breathing down my neck, and a one-star Upwork review from a $50 gig I botched in Philly. Back in my hometown (pop. 3,000), I’m teaching myself Python, screwing up PTA workshops, and building dinky sites like Jerry’s Diner and Ohio Vitality 11. I’m no tech bro—just a guy stumbling through code, dodging Tammy’s gossip at Dollar General, and dreaming of something bigger than Taco Bell runs and Navient calls. Ohio Code Dreams is my story: the fails, the fights, and the faint hope I might actually make it as a coder. Stick around for the mess. Follow me on X
-#OhioCodeDreams&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Starting from Zero: Ohio History Grad’s Coding Journey</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Fri, 18 Jul 2025 10:42:00 +0800</pubDate>
+      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/</guid>
       <description>Ohio history grad fights $40,000 debt and diner job to learn coding. Follow Jake’s raw journey to coder. #OhioCodeDreams</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;I’m Jake Miller, a history major from a dead-end Ohio town off Route 23, where the factories rusted out and the Buckeyes are the only thing keeping us sane. I’ve got a master’s from Ohio State that’s collecting dust, $1,200 in Navient debt breathing down my neck, and a one-star Upwork review from a $50 gig I botched in Philly.&lt;/p&gt;
+&lt;p&gt;Back in my hometown (pop. 3,000), I’m teaching myself Python, screwing up PTA workshops, and building dinky sites like Jerry’s Diner. I’m no tech bro—just a guy stumbling through code, dodging Tammy’s gossip at Dollar General, and dreaming of something bigger than Taco Bell runs and Navient calls.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,11 +1,13 @@
 ---
 title: "Starting from Zero: Ohio History Grad’s Coding Journey"
-date: 2025-07-18T10:42:00+08:00
+date: 2025-07-18  # 日期可以简化为 2025-07-18 更自然
 draft: false
+author: "Jake Miller"  # 加上作者名，日期后会显示你的名字
 categories: ["Coding Fails", "Ohio Life"]
 tags: ["Ohio", "coding", "career change", "Python"]
 description: "Ohio history grad fights $40,000 debt and diner job to learn coding. Follow Jake’s raw journey to coder. #OhioCodeDreams"
-featured_image: "/images/ohio-coding-diner.jpg"
+cover:
+  image: "/images/ohio-coding-diner.jpg"  # 统一用 cover.image 格式，主题更兼容
 ---
 
 # A History Grad’s Fall into the Void

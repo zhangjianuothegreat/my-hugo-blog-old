@@ -1,0 +1,33 @@
+{{- $content := .Content -}}
+{{- $lang := .Lang -}}
+{{- $params := .Page.Scratch.Get "params" -}}
+{{- $maxShownLines := $params.code.maxShownLines | default 10 | int -}}
+{{- $copy := $params.code.copy | default true -}}
+{{- $lines := split $content "\n" | len -}}
+{{- $options := dict "lineNoStart" 1 "lineNos" true -}}
+{{- $options = .Options | partial "function/dict.html" | merge $options -}}
+{{- $lineNoStart := $options.lineNoStart | int -}}
+{{- $lineNos := $options.lineNos | partial "function/bool.html" -}}
+{{- $options = dict "noClasses" false "lineNos" false | merge $options -}}
+{{- $result := transform.Highlight $content $lang $options -}}
+
+<div class="code-wrapper">
+  {{ if $copy }}
+  <div class="code-header">
+    <span class="code-lang">{{ $lang | default "text" }}</span>
+    <button class="copy-btn" onclick="copyCode(this)">
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+  {{ end }}
+  
+  <pre class="code-block {{ if $lang }}language-{{ $lang }}{{ end }}">
+    {{- $result -}}
+  </pre>
+  
+  {{ if and $copy (gt $lines $maxShownLines) }}
+  <button class="expand-btn" onclick="toggleCode(this)">
+    {{ if le $lineNos false }}显示全部{{ else }}显示全量代码{{ end }}
+  </button>
+  {{ end }}
+</div>
