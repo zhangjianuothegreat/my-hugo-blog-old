@@ -1,7 +1,7 @@
 ---
 title: "Ohio Code Dreams: Back to the Grease After Crashing in Philly"
-date: 2021-04-15T00:00:00+08:00  # 确保日期格式正确，不含未来时间
-draft: false  # 必须设为false才会发布
+date: 2021-04-15T00:00:00+08:00
+draft: false
 categories: 
   - "Coding Fails"
   - "Ohio Life"
@@ -12,7 +12,11 @@ tags:
   - "Philly"
   - "Rust Belt"
 description: "Jake Miller, Ohio history grad, bombs a WordPress gig in Philly and retreats to a Rust Belt auto shop. #OhioCodeDreams"
+comments: true
+cover:
+  image: "/images/ohio-coding-diner.jpg"  # 封面图路径（如果主题支持）
 ---
+
 
 I’m sprawled on the sagging couch in my Fishtown one-bedroom, the Philly humidity making my T-shirt stick to my skin like a bad decision. It’s April 2021, and I’m nursing a hangover from last night’s $3 Yuenglings at Bob & Barbara’s. My laptop’s open, glowing with the wreckage of my life: a Navient email screaming about my $40,000 student loan debt, a maxed-out credit card from a $200 car repair, and a checking account sitting at $87.36.
 
