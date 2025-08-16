@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f4f6;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Payment Successful!</h1>
+        <p>Your purchase has been confirmed. You will be redirected shortly...</p>
+    </div>
     <script>
-        localStorage.setItem('lucky_direction_paid', 'true');
-        window.location.href = 'https://ohiocodedreams.com/lucky_direction.html';
+        // 检查URL中的session_id参数
+        const query = new URLSearchParams(window.location.search);
+        if (query.has('session_id')) {
+            localStorage.setItem('lucky_direction_paid', 'true');
+        }
+        
+        // 3秒后跳转回主页面并携带支付成功标识
+        setTimeout(() => {
+            window.location.href = 'https://ohiocodedreams.com/lucky_direction.html?payment_success=true';
+        }, 3000);
     </script>
 </body>
 </html>
