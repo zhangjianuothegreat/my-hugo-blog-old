@@ -44,8 +44,18 @@
         const stripe = Stripe('pk_test_51RaUyRQmhFsssNQg2vJNcMhJWsthgnlRzVBdeuNtfyJAkuB5SSvhE1teDKyUI0zynTQaY9MLKh8xk7pegpLxKmAC008zJSXDap');
         let luckyAngle = 0;
 
-        function checkPaymentStatus() {
+        // 检查URL中的支付状态
+        function checkURLPaymentStatus() {
+            const query = new URLSearchParams(window.location.search);
+            if (query.has('payment_success')) {
+                localStorage.setItem('lucky_direction_paid', 'true');
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
             return localStorage.getItem('lucky_direction_paid') === 'true';
+        }
+
+        function checkPaymentStatus() {
+            return checkURLPaymentStatus();
         }
 
         async function initiatePayment(type) {
@@ -57,7 +67,7 @@
                     body: JSON.stringify({
                         priceId: priceId,
                         mode: type === 'monthly' ? 'subscription' : 'payment',
-                        success_url: 'https://ohiocodedreams.com/success.html',
+                        success_url: 'https://ohiocodedreams.com/success.html?session_id={CHECKOUT_SESSION_ID}',
                         cancel_url: 'https://ohiocodedreams.com/cancel.html'
                     })
                 });
@@ -165,6 +175,9 @@
                 .then(() => console.log('Service Worker registered'))
                 .catch(error => console.error('Service Worker error:', error));
         }
+
+        // 初始化时检查支付状态
+        checkURLPaymentStatus();
     </script>
 </body>
 </html>
