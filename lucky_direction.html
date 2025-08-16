@@ -6,6 +6,9 @@
     <title>Lucky Direction Compass</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://js.stripe.com/v3/"></script>
+    <!-- iOS PWA兼容性配置 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
     <div class="text-center">
@@ -19,10 +22,25 @@
         <button onclick="initiatePayment('monthly')" class="bg-green-500 text-white p-2 rounded m-2">Subscribe for $1.99/month</button>
         <button onclick="initiatePayment('one-time')" class="bg-green-500 text-white p-2 rounded m-2">Buy for $14.99</button>
         <button onclick="enableCompass()" class="bg-purple-500 text-white p-2 rounded m-2">Enable Compass</button>
+        <!-- 添加PWA安装按钮 -->
+        <button id="installBtn" style="display:none" class="bg-yellow-500 text-white p-2 rounded m-2">Install App</button>
         <p id="lucky-info" class="mt-4"></p>
         <canvas id="compass" width="200" height="200" class="mt-4"></canvas>
     </div>
     <script>
+        // PWA安装引导
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('installBtn').style.display = 'block';
+        });
+        
+        document.getElementById('installBtn').onclick = () => {
+            deferredPrompt.prompt();
+        };
+
+        // 应用主逻辑
         const stripe = Stripe('pk_test_51RaUyRQmhFsssNQg2vJNcMhJWsthgnlRzVBdeuNtfyJAkuB5SSvhE1teDKyUI0zynTQaY9MLKh8xk7pegpLxKmAC008zJSXDap');
         let luckyAngle = 0;
 
@@ -33,14 +51,14 @@
         async function initiatePayment(type) {
             try {
                 const priceId = type === 'monthly' ? 'price_1RqquTQmhFsssNQgZVYNYSoT' : 'price_1Rqqz4QmhFsssNQg0gC7Fkhj';
-                const response = await fetch('/zen/api/create-checkout-session', {
+                const response = await fetch('/api/create-checkout-session', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         priceId: priceId,
                         mode: type === 'monthly' ? 'subscription' : 'payment',
-                        success_url: 'http://192.168.8.112/zen/lucky_direction/success.html',
-                        cancel_url: 'http://192.168.8.112/zen/lucky_direction/cancel.html'
+                        success_url: 'https://ohiocodedreams.com/success.html',
+                        cancel_url: 'https://ohiocodedreams.com/cancel.html'
                     })
                 });
                 if (!response.ok) {
@@ -73,7 +91,7 @@
                 document.getElementById('lucky-info').innerText = 'Please enter a valid birth date!';
                 return;
             }
-            fetch(`/zen/api/bazi?year=${year}&month=${month}&day=${day}`)
+            fetch(`/api/bazi?year=${year}&month=${month}&day=${day}`)
                 .then(response => {
                     if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
                     return response.json();
@@ -141,8 +159,9 @@
             });
         }
 
+        // 注册Service Worker（路径已修正）
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/zen/lucky_direction/sw.js')
+            navigator.serviceWorker.register('/sw.js', { scope: '/' })
                 .then(() => console.log('Service Worker registered'))
                 .catch(error => console.error('Service Worker error:', error));
         }
